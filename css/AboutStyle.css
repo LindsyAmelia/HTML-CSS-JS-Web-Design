@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-container {
+  z-index: 50;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  margin: 5px 7rem 5px 7rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title > h1 > a {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "Urbanist", sans-serif;
+}
+
+.nav-menu > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu > a:hover {
+  text-decoration: underline;
+}
+
+.about-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 0rem 7rem 0px 7rem;
+  gap: 2rem;
+  min-height: 100vh;
+  animation: fade-up 0.9s;
+}
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  font-size: 1.3rem;
+  font-family: "Urbanist", sans-serif;
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  gap: 3rem;
+}
+
+.first-row-background-section {
+  display: flex;
+  gap: 3rem;
+  width: 150%;
+}
+
+.background-image-about {
+  width: 150%;
+  height: 25vh;
+  object-fit: cover;
+  object-position: 0% 0%;
+  opacity: 0.3;
+  border-radius: 1rem;
+}
+
+.image-about {
+  width: 40vw;
+  height: 27rem;
+  object-fit: cover;
+  right: 0;
+  border-radius: 1rem;
+}
+
+.horizontal-line {
+  margin: 2rem 0px 0px 0px;
+  opacity: 0.5;
+}
+
+footer {
+  width: 100vw;
+  margin: 30px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    margin: 5px 3rem 5px 3rem;
+  }
+
+  .background-image-about,
+  .first-row-background-section {
+    width: 100%;
+  }
+
+  .sticky-section > div > p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 0rem 3rem 0px 3rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .background-image-about,
+  .first-row-background-section {
+    width: 130%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .background-image-about {
+    width: 100%;
+    height: 100%;
+  }
+  .first-row-background-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navbar {
+    margin: 5px 1rem 5px 1rem;
+  }
+
+  .sticky-section > div {
+    margin: 0rem 2srem;
+  }
+  .nav-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 3.65rem;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    margin: 5px 0 5px 0;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .about-section {
+    padding: 0rem 1rem 0px 1rem;
+  }
+
+  .image-about {
+    width: 80vw;
+    height: 10rem;
+  }
+
+  .sticky-section {
+    flex-direction: column;
+  }
+
+  footer {
+    font-size: x-small;
+  }
+}

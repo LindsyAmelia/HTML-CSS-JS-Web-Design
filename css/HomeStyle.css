@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-container {
+  z-index: 50;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  margin: 5px 7rem 5px 7rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title > h1 > a {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "Urbanist", sans-serif;
+}
+
+.nav-menu > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu > a:hover {
+  text-decoration: underline;
+}
+
+.slider-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0rem 7rem 0px 7rem;
+  animation: fade-up 0.9s;
+}
+
+.slider-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  max-width: auto;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.slider-container {
+  display: flex;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 20vw;
+}
+
+.slider-container:hover {
+  opacity: 1;
+}
+
+.image-slides {
+  width: 20vw;
+  height: 550px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: 1500ms;
+}
+
+.description-section {
+  padding: 3rem 7rem 3px 7rem;
+  animation: fade-up 0.9s;
+}
+
+.description-section-title > h1 {
+  margin-bottom: 1rem;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-style: normal;
+  text-align: end;
+}
+
+.description-section-subtitle {
+  margin-top: 50px;
+}
+
+.description-section-subtitle > h1 {
+  margin-bottom: 1rem;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+
+.description-section-subtitle-partner > h1 {
+  margin-bottom: 1rem;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  color: #777;
+}
+
+.description-section-content {
+  font-size: 2rem;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-align: justify;
+  margin: 10px 0px 30px 0px;
+}
+
+.description-section-logo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.button-learn-more {
+  text-align: end;
+}
+
+.button-learn-more > a {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-learn-more > button:hover {
+  background-color: white;
+  color: black;
+}
+
+.image-brand-car {
+  max-width: 190px;
+  width: 15vw;
+}
+
+.horizontal-line {
+  margin: 2rem 0px 0px 0px;
+  opacity: 0.5;
+}
+
+footer {
+  width: 100vw;
+  margin: 30px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    margin: 5px 3rem 5px 3rem;
+  }
+
+  .slider-section {
+    padding: 0rem 3rem 0rem 3rem;
+  }
+
+  .slider-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description-section-content {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description-section {
+    padding: 3rem 3rem 3px 3rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navbar {
+    margin: 5px 1rem 5px 1rem;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 3.65rem;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    margin: 5px 0 5px 0;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .slider-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slider-container {
+    width: 80vw;
+  }
+
+  .slider-container:hover {
+    opacity: 1;
+  }
+
+  .image-slides {
+    width: 80vw;
+    height: 100px;
+  }
+
+  .slider-title {
+    font-size: 3rem;
+  }
+
+  .description-section-content {
+    font-size: 1rem;
+  }
+
+  .description-section-logo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-brand-car {
+    width: 20vw;
+  }
+
+  footer {
+    font-size: x-small;
+  }
+}

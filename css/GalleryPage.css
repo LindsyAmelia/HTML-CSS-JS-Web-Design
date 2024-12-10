@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-container {
+  z-index: 50;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  margin: 5px 7rem 5px 7rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title > h1 > a {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "Urbanist", sans-serif;
+}
+
+.nav-menu > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu > a:hover {
+  text-decoration: underline;
+}
+
+.gallery-title {
+  padding: 7rem 2rem 0px 9rem;
+}
+
+.gallery-title > h1 {
+  font-family: "Urbanist", sans-serif;
+}
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 1rem 2rem 0px 2rem;
+  animation: fade-up 0.9s;
+}
+
+.image-gallery-box {
+  position: relative;
+  width: 25rem;
+  height: 20rem;
+}
+
+.overlay-image-gallery {
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  color: white;
+  transition: 1000ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.2rem;
+}
+
+.image-gallery {
+  position: relative;
+  width: 25rem;
+  height: 20rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image-gallery-box:hover > .overlay-image-gallery {
+  height: 100%;
+  opacity: 1;
+}
+
+.horizontal-line {
+  margin: 2rem 0px 0px 0px;
+  opacity: 0.5;
+}
+
+footer {
+  width: 100vw;
+  margin: 30px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    margin: 5px 3rem 5px 3rem;
+  }
+
+  .image-gallery-box,
+  .image-gallery {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-gallery-box,
+  .image-gallery {
+    width: 17rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navbar {
+    margin: 5px 1rem 5px 1rem;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 3.65rem;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    margin: 5px 0 5px 0;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  footer {
+    font-size: x-small;
+  }
+}

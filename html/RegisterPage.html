@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wHeel Hub</title>
+    <link rel="stylesheet" href="../css/RegisterStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="nav-title">
+          <h1><a href="../html/HomePage.html">Wheel Hub</a></h1>
+        </div>
+        <div class="nav-menu" id="navmenu">
+          <a href="../html/HomePage.html">Home</a>
+          <a href="../html/PromotionPage.html">Promotion</a>
+          <a href="../html/GalleryPage.html">Gallery</a>
+          <a href="../html/AboutPage.html">About Us</a>
+          <a href="../html/RegisterPage.html" style="color: aqua">Register</a>
+        </div>
+        <div class="nav-hamburger" onclick="handleHamburger()">
+          <i class="fa fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+
+    <div class="register-section">
+      <div class="form-box">
+        <h2>Register</h2>
+        <form id="register-form">
+          <div class="input-box">
+            <label>Username</label>
+            <input type="text" name="username" />
+          </div>
+          <div class="input-box">
+            <label>Email</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="input-box">
+            <label>Password</label>
+            <input type="password" name="password" />
+          </div>
+          <div class="input-box">
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" />
+          </div>
+          <div class="input-box">
+            <label>Gender</label>
+            <div class="gender-options">
+              <label
+                ><input type="radio" name="gender" value="male" />
+                Male</label
+              >
+              <label
+                ><input type="radio" name="gender" value="female" />
+                Female</label
+              >
+            </div>
+          </div>
+          <div class="input-box">
+            <label>Date Of Birth</label>
+            <input type="date" name="dob" />
+          </div>
+          <div class="input-box">
+            <label>
+              <input type="checkbox" name="agreement" />
+              I Agree to the Terms and Conditions
+            </label>
+          </div>
+          <div class="input-box">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div>Copyrights &#169; Wheel Hub 2024 Reserved</div>
+    </footer>
+    <script src="../js/RegisterScript.js"></script>
+  </body>
+</html>
